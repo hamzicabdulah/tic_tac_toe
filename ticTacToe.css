@@ -1,0 +1,265 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background: #ffbf80;
+}
+.heading {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Yatra One', cursive;
+  color: #660033;
+}
+.screen {
+  position: absolute;
+  width: 250px;
+  height: 320px;
+  top: 50%;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: -220px;
+}
+.row {
+  margin-bottom: -0.33em;
+}
+.area {
+  width: 5em;
+  height: 5em;
+  display: inline-block;
+  position: relative;
+}
+.one, .two, .four, .five, .seven, .eight {
+  border-right: #660033 solid 4px;
+}
+.one, .two, .three, .four, .five, .six {
+  border-bottom: #660033 solid 4px;
+}
+.area > h1 {
+  text-align: center;
+  font-size: 5.5em;
+  position: absolute;
+  top: -.65em;
+  right: 0.05em;
+  left: 0;
+  font-family: "Architects Daughter", sans-serif;
+  color: #660033;
+  -webkit-transition: font-size 0.2s;
+  -moz-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+.area-filled > h1 {
+  font-size: 3.5em;
+}
+.horizontalWin, .verticalWin, .backslashWin, .slashWin {
+  text-align: center;
+  font-size: 7.9em;
+  font-family: Lato, sans-serif;
+  position: absolute;
+  color: #660033;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.horizontalWin {
+  top: -1.38em;
+  right: -0.1em;
+}
+.verticalWin {
+  top: -1.37em;
+  right: 0.18em;
+}
+.slashWin {
+  top: -1.35em;
+  right: 0.12em;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45.5deg);
+}
+.backslashWin {
+  top: -1.32em;
+  right: 0.21em;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.area-hor-won > .horizontalWin, .area-ver-won > .verticalWin, .area-backslash-won > .backslashWin, .area-slash-won > .slashWin {
+  opacity: 1;
+}
+button {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 0.9em;
+  width:100px;
+  background: #4d0026;
+  color: #ffcc99;
+  border: #660033 solid;
+  padding: 0.3em;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.15s linear;
+}
+.againButton, .settingsBtn, .restartBtn {
+  position: relative;
+  margin: 2em -50px;
+}
+.againButton {
+  left:50%;
+}
+.restartBtn {
+  left: 26%;
+}
+.settingsBtn {
+  left: 70%;
+}
+button:hover {
+  color: #ffd9b3;
+  background: #800042;
+}
+button:active {
+  -webkit-transform: scale(0.1 0.1);
+  transform: scale(0.95, 0.9);
+}
+.decrOpac {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0.88;
+  background: black;
+  visibility: visible;
+}
+.playAgain{
+  position: absolute;
+  width: 260px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-left: -130px;
+  margin-top: -1200px;
+  background: #c8c3b7;
+  border-radius: 5%;
+  z-index: 1;
+  transition: margin-top 1s;
+}
+#playAgainVisible {
+  margin-top: -100px;
+}
+.whoWon {
+  font-family: 'Yatra One', cursive;
+  font-size: 1.7em;
+  text-align: center;
+  margin-top: 1.45em;
+}
+.againButton {
+  margin-top: 0.1em;
+}
+.settings {
+  position: absolute;
+  width: 260px;
+  height: 475px;
+  top: 50%;
+  left: 50%;
+  margin-left: -130px;
+  margin-top: -250px;
+  background: #c8c3b7;
+  border-radius: 5%;
+  z-index: 1;
+  -webkit-transition: margin-top 1s;
+  transition: margin-top 1s;
+}
+#invisibleSett {
+  margin-top: -1200px;
+}
+h3 {
+  margin-left: 1em;
+  margin-bottom: 0.1em;
+  font-family: 'Yatra One', cursive;
+  font-size: 1.5em;
+}
+.select {
+  margin: 0.2em -1.5em 1em 1.5em;
+  display: inline-block;
+  font-family: 'Yatra One', cursive;
+  font-size: 0.85em;
+  text-align: center;
+  width: 90px;
+  background: rgb(202,180,144);
+  color: #4d0026;
+  border: #660033 solid;
+  border-radius: 10%;
+  padding: 0.3em;
+  cursor: pointer;
+}
+.x, .o {
+  width: 30px;
+}
+.hard {
+  margin-top: -9em;
+}
+.resumeNewBtns {
+  text-align: center;
+  margin-top: 2.5em;
+}
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 3.7em;
+    margin-right: 0.74em;
+  }
+  .screen {
+    width: 25em;
+    margin-left: -10.5em;
+    height: 500px;
+    margin-top: -322px;
+  }
+  .restartBtn, .settingsBtn {
+    margin-top: 4em;
+  }
+  .restartBtn {
+    left: 29%;
+  }
+  .settingsBtn {
+    left: 57%;
+  }
+  .area {
+    width: 7em;
+    height: 7em;
+  }
+  .area > h1 {
+    font-size: 8.2em;
+  }
+  .area-filled > h1 {
+    font-size: 5em;
+  }
+  .horizontalWin, .verticalWin, .backslashWin, .slashWin {
+    font-size: 11.9em;
+  }
+  .verticalWin {
+    right: 0.15em;
+  }
+  .slashWin {
+    right: 0.11em;
+  }
+  .backslashWin {
+    right: 0.161em;
+  }
+  .playAgain {
+    width: 300px;
+    margin-left: -150px;
+  }
+  .whoWon {
+    font-size: 1.9em;
+  }
+  .settings {
+    width: 380px;
+    height: 450px;
+    margin-left: -190px;
+    margin-top: -215px;
+  }
+  .resumeBtn {
+    margin-right: 1em;
+  }
+  .hard {
+    margin-top: 0.2em;
+  }
+}

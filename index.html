@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="ticTacToe.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yatra+One">
+  </head>
+  <body ng-app="ticTacToe" ng-controller="ticTacToeCtrl">
+
+    <div class="screen">
+      <h1 class="heading">Tic Tac Toe</h1>
+      <div class="table">
+        <div ng-repeat='row in rows' class='{{row.class}}'>
+          <div ng-repeat='area in row.areas' class='{{area.class}}' ng-click="fill(area.class)">
+            <h1>{{area.value}}</h1>
+            <p class="horizontalWin">{{area.horizontal}}</p>
+            <p class="verticalWin">{{area.vertical}}</p>
+            <p class="slashWin">{{area.slash}}</p>
+            <p class="backslashWin">{{area.backslash}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="restSettBtns">
+        <button class="restartBtn" ng-click='restart()'>Restart</button>
+        <button class="settingsBtn" ng-click='goToSettings()'>Settings</button>
+      </div>
+    </div>
+    <div id="{{playAgainId}}" class="playAgain">
+      <p class="whoWon">{{winner}}</p>
+      <button class="againButton" ng-click='reset()'>Play Again</button>
+    </div>
+    <div id="{{startGameId}}" class="settings">
+      <div>
+        <h3>Select Mode:</h3>
+        <div class="select selectMode multi" ng-click="selectMode('multi')">Multiplayer</div>
+        <div class="select selectMode single" ng-click="selectMode('single')">Single Player</div>
+      </div>
+      <div>
+        <h3>Select Side:</h3>
+        <div class="select selectSide x" ng-click="selectSide('x')">X</div>
+        <div class="select selectSide o" ng-click="selectSide('o')">O</div>
+      </div>
+      <div ng-show="mode==='single'">
+        <h3>Select Difficulty:</h3>
+        <div class="select selectDiff easy" ng-click="selectDiff('easy')">Easy</div>
+        <div class="select selectDiff medium" ng-click="selectDiff('medium')">Medium</div>
+        <div class="select selectDiff hard" ng-click="selectDiff('hard')">Hard</div>
+      </div>
+      <div class="resumeNewBtns">
+        <button class="resumeBtn" ng-disabled="changesMade" ng-click="exitSettings()">Resume</button>
+        <button class="newGame" ng-click="reset()">New Game</button>
+      </div>
+    </div>
+    <div class="decrOpac">
+    </div>
+  </body>
+  <script src="bower_components/angular.min.js"></script>
+  <script src="app.js"></script>
+</html>

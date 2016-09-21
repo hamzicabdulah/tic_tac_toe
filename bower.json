@@ -1,0 +1,20 @@
+{
+  "name": "Tic Tac Toe",
+  "main": "index.html",
+  "authors": [
+    "hamzicabdulah <hamzic@live.com>"
+  ],
+  "description": "Tic Tac Toe game built using AngularJS",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}

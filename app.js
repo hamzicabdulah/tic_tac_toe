@@ -11,8 +11,10 @@ app.controller('ticTacToeCtrl', function ($scope) {
 
   //Open settings modal
   $scope.goToSettings = function () {
-    $scope.startGameId = '';
-    decrOpacityDiv.style.visibility = 'visible';
+    if (!gameOver) {
+        $scope.startGameId = '';
+        decrOpacityDiv.style.visibility = 'visible';
+    }
   }
 
   //Exit settings modal
